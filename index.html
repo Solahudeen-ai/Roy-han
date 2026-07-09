@@ -48,70 +48,79 @@
 </head>
 <body class="bg-soft-alabaster text-charcoal-grey font-sans antialiased">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center relative">
-            
-            <!-- Logo -->
-            <div class="text-2xl font-bold text-medical-blue">Roy<span class="text-sage-green">'Han</span></div>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-7 font-medium text-sm items-center">
+ <!-- Navigation -->
+    <nav class="w-full bg-white">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex-shrink-0">
+                <img src="Royhan_logo.jpeg" alt="Roy'Han - Your Partner in Hygiene" class="h-16 w-auto object-contain" />
+            </div>
+            <div class="flex items-center gap-6">
+                <button aria-label="Search" class="text-medical-blue hover:text-charcoal-grey transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <button id="menu-toggle" aria-label="Menu" class="text-medical-blue hover:text-charcoal-grey transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <line x1="4" y1="7" x2="20" y2="7"></line>
+                        <line x1="4" y1="17" x2="20" y2="17"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="menu-panel" class="hidden border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3 font-medium text-sm">
                 <a href="#home" class="hover:text-medical-blue transition">Home</a>
                 <a href="#about" class="hover:text-medical-blue transition">About Us</a>
                 <a href="#industries" class="hover:text-medical-blue transition">Industries</a>
                 <a href="#products" class="hover:text-medical-blue transition">Products</a>
                 <a href="#masjids" class="hover:text-medical-blue transition">Masjid Care</a>
                 <a href="#team" class="hover:text-medical-blue transition">Our Team</a>
-                <a href="#contact" class="px-5 py-2 bg-medical-blue text-white rounded-full hover:bg-teal-700 transition">Get a Quote</a>
-            </div>
-
-            <!-- Mobile Hamburger Button (The 3 Lines) -->
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-btn" class="text-charcoal-grey hover:text-medical-blue focus:outline-none" aria-label="Toggle Menu">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            
-            <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white shadow-xl border-t border-gray-100 md:hidden">
-                <div class="flex flex-col px-6 py-6 space-y-5 font-medium text-lg">
-                    <a href="#home" class="mobile-link hover:text-medical-blue transition">Home</a>
-                    <a href="#about" class="mobile-link hover:text-medical-blue transition">About Us</a>
-                    <a href="#industries" class="mobile-link hover:text-medical-blue transition">Industries</a>
-                    <a href="#products" class="mobile-link hover:text-medical-blue transition">Products</a>
-                    <a href="#masjids" class="mobile-link hover:text-medical-blue transition">Masjid Care</a>
-                    <a href="#team" class="mobile-link hover:text-medical-blue transition">Our Team</a>
-                    <a href="#contact" class="mobile-link text-medical-blue font-bold">Get a Quote</a>
-                </div>
+                <a href="#contact" class="hover:text-medical-blue transition">Get a Quote</a>
             </div>
         </div>
     </nav>
+ 
+    <!-- Hero Section -->
+    <section id="home">
+        <!-- Full-bleed hero image -->
+        <div class="relative w-full h-[55vh] md:h-[65vh] overflow-hidden">
+            <div class="hero-slide" style="background-image:url('Royhan.jpeg');"></div>
+            <div class="hero-slide" style="background-image:url('Royhan4.jpeg');"></div>
+            <div class="hero-slide" style="background-image:url('Royhan3.jpeg');"></div>
+        </div>
 
-    <!-- Hero Section (Cleaned up, human, and minimal) -->
-    <section id="home" class="relative pt-40 pb-20 px-6 overflow-hidden">
-        <div class="relative z-10 max-w-7xl mx-auto text-center">
-            
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 max-w-4xl mx-auto leading-tight tracking-tight">Clean spaces. <br/><span class="text-medical-blue">Good people.</span></h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-xl mx-auto leading-relaxed">Professional care for your facilities, powered by a heart for our community.</p>
-
-            <!-- Dynamic / moving hero image -->
-            <div class="relative w-full max-w-4xl mx-auto h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl mb-10 border-4 border-white">
-                <div class="hero-slide" style="background-image:url('Royhan.jpeg');"></div>
-                <div class="hero-slide" style="background-image:url('Royhan4.jpeg');"></div>
-                <div class="hero-slide" style="background-image:url('Royhan3.jpeg');"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        <!-- Colored statement block -->
+        <div class="relative bg-gradient-to-b from-medical-blue to-[#1B4F58] text-white px-6 pt-16 pb-24">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.05] mb-8 max-w-2xl">WE CLEAN<br>WHAT YOU TRUST</h1>
+                <p class="text-lg md:text-xl text-white/85 max-w-xl mb-10 leading-relaxed">Welcome to Roy'Han, your partner in institutional hygiene. We supply high-performance soaps, detergents and air fresheners to hospitals, hotels, schools, restaurants and factories, and every week we put part of what we earn back into cleaning masjids in our community.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#products" class="px-8 py-4 rounded-full border-2 border-white text-white font-bold tracking-wide hover:bg-white hover:text-medical-blue transition">VIEW CATALOG</a>
+                    <a href="#contact" class="px-8 py-4 rounded-full bg-white text-medical-blue font-bold tracking-wide hover:bg-soft-alabaster transition">REQUEST SAMPLE</a>
+                </div>
             </div>
 
-            <!-- Call to Action -->
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#products" class="px-8 py-4 bg-charcoal-grey text-white font-medium rounded-full hover:bg-black transition shadow-lg">View Catalog</a>
-                <a href="#contact" class="px-8 py-4 bg-sage-green text-white font-medium rounded-full hover:bg-green-700 transition shadow-lg">Work With Us</a>
+            <!-- Overlapping badge -->
+            <div class="absolute -bottom-10 left-6 md:left-10 w-20 h-20 rounded-full bg-sage-green border-4 border-soft-alabaster flex items-center justify-center shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-2.5 3-5 6.2-5 9.5a5 5 0 0010 0C17 9.2 14.5 6 12 3z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.5 14.5a2.5 2.5 0 005 0"></path>
+                </svg>
             </div>
         </div>
     </section>
+
+    <div class="h-10"></div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuPanel = document.getElementById('menu-panel');
+        menuToggle.addEventListener('click', () => {
+            menuPanel.classList.toggle('hidden');
+        });
+    </script>
 
     <!-- About Us Section -->
     <section id="about" class="py-20 bg-white">
@@ -364,23 +373,6 @@
     </a>
 
     <script>
-        // Mobile Menu Toggle Script
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Close menu when a link is clicked
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-
-        // Number Counters Script
         const counters = document.querySelectorAll('.counted');
         let started = false;
         function runCounters() {
