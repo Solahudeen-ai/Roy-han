@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Hygiene Solutions | Institutional Cleaning Supplies</title>
+    <title>Roy'Han | Professional Hygiene Solutions & Community Masjid Care</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -19,6 +19,32 @@
             }
         }
     </script>
+    <style>
+        @keyframes kenburns {
+            0%   { transform: scale(1) translate(0,0); opacity: 0; }
+            10%  { opacity: 1; }
+            45%  { opacity: 1; }
+            55%  { opacity: 0; }
+            100% { transform: scale(1.12) translate(-1%, -1%); opacity: 0; }
+        }
+        .hero-slide {
+            position: absolute; inset: 0;
+            background-size: cover; background-position: center;
+            animation: kenburns 15s infinite;
+        }
+        .hero-slide:nth-child(1) { animation-delay: 0s; }
+        .hero-slide:nth-child(2) { animation-delay: 5s; }
+        .hero-slide:nth-child(3) { animation-delay: 10s; }
+
+        @keyframes pulseWA {
+            0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.55); }
+            70%  { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+        .wa-float { animation: pulseWA 2.4s infinite; }
+
+        .counted { transition: color 0.3s; }
+    </style>
 </head>
 <body class="bg-soft-alabaster text-charcoal-grey font-sans antialiased">
 
@@ -26,25 +52,34 @@
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="text-2xl font-bold text-medical-blue">Roy<span class="text-sage-green">'Han</span></div>
-            <div class="hidden md:flex space-x-8 font-medium">
+            <div class="hidden md:flex space-x-7 font-medium text-sm">
                 <a href="#home" class="hover:text-medical-blue transition">Home</a>
+                <a href="#about" class="hover:text-medical-blue transition">About Us</a>
                 <a href="#industries" class="hover:text-medical-blue transition">Industries</a>
                 <a href="#products" class="hover:text-medical-blue transition">Products</a>
-                <a href="#contact" class="px-6 py-2 bg-medical-blue text-white rounded-full hover:bg-teal-700 transition">Get a Quote</a>
+                <a href="#masjids" class="hover:text-medical-blue transition">Masjid Care</a>
+                <a href="#team" class="hover:text-medical-blue transition">Our Team</a>
+                <a href="#contact" class="px-5 py-2 bg-medical-blue text-white rounded-full hover:bg-teal-700 transition">Get a Quote</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative pt-40 pb-32 px-6 overflow-hidden">
-        <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 z-0">
-            <img src="Royhan.jpeg" alt="Clean Background" class="w-full h-full object-cover" />
-        </div>
-        
-        <!-- Hero Content -->
+    <section id="home" class="relative pt-40 pb-24 px-6 overflow-hidden">
         <div class="relative z-10 max-w-7xl mx-auto text-center">
-            <p class="text-xl text-gray-700 mb-10 max-w-2xl mx-auto">Providing high-performance liquid soaps, detergents, and air fresheners to hospitals, schools, hotels, and factories.</p>
+            <p class="uppercase tracking-widest text-sage-green font-semibold mb-3 text-sm">Institutional Hygiene, Handled With Care</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 max-w-3xl mx-auto leading-tight">Clean spaces. Trusted people. Every single day.</h1>
+            <p class="text-xl text-gray-700 mb-10 max-w-2xl mx-auto">Providing high-performance liquid soaps, detergents, and air fresheners to hospitals, schools, hotels, restaurants and factories.</p>
+
+            <!-- Dynamic / moving hero image -->
+            <div class="relative w-full max-w-4xl mx-auto h-64 md:h-96 rounded-3xl overflow-hidden shadow-xl mb-8">
+                <div class="hero-slide" style="background-image:url('Royhan.jpeg');"></div>
+                <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80');"></div>
+                <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=1200&q=80');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+
+            <!-- Buttons now sit directly beneath the picture -->
             <div class="flex justify-center gap-4">
                 <a href="#products" class="px-8 py-4 bg-charcoal-grey text-white rounded-full hover:bg-black transition">View Catalog</a>
                 <a href="#contact" class="px-8 py-4 bg-sage-green text-white rounded-full hover:bg-green-700 transition">Request Sample</a>
@@ -52,66 +87,196 @@
         </div>
     </section>
 
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <p class="uppercase tracking-widest text-sage-green font-semibold mb-3 text-sm">About Us</p>
+            <h2 class="text-3xl font-bold mb-6">Who We Are</h2>
+            <p class="text-gray-600 text-lg leading-relaxed mb-6">Roy'Han supplies institutional-grade soaps, detergents and air fresheners to hospitals, schools, hotels, restaurants and factories across the region. Beyond the products we sell, we run a weekly community programme that cleans local masjids using donations from our customers and partners — because the hygiene we sell for a living is a service we believe in giving back.</p>
+            <div class="grid md:grid-cols-3 gap-8 mt-12 text-left">
+                <div class="p-6 rounded-2xl bg-soft-alabaster">
+                    <h3 class="font-bold text-medical-blue mb-2">Our Mission</h3>
+                    <p class="text-gray-600 text-sm">Deliver dependable, high-performance hygiene supplies to every institution we serve, without compromise.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-soft-alabaster">
+                    <h3 class="font-bold text-medical-blue mb-2">Our Values</h3>
+                    <p class="text-gray-600 text-sm">Reliability, cleanliness and community — we treat every client site and every masjid we wash the same way: with care.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-soft-alabaster">
+                    <h3 class="font-bold text-medical-blue mb-2">Our Promise</h3>
+                    <p class="text-gray-600 text-sm">A portion of what we earn goes straight back into keeping places of worship in our community clean, every week.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Industries Section -->
-    <section id="industries" class="py-20 bg-white">
+    <section id="industries" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Industries We Serve</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Industry Cards -->
-                <div class="border border-gray-100 rounded-2xl hover:shadow-xl transition overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Healthcare" class="w-full h-40 object-cover" />
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-medical-blue">Healthcare</h3>
-                        <p class="text-gray-600">Sterile-grade formulations for hospitals and clinics.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+                <div class="border border-gray-100 bg-white rounded-2xl hover:shadow-xl transition overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Healthcare" class="w-full h-24 object-cover" />
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-2 text-medical-blue">Healthcare</h3>
+                        <p class="text-gray-600 text-sm">Sterile-grade formulations for hospitals and clinics.</p>
                     </div>
                 </div>
-                <div class="border border-gray-100 rounded-2xl hover:shadow-xl transition overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80" alt="Hospitality" class="w-full h-40 object-cover" />
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-medical-blue">Hospitality</h3>
-                        <p class="text-gray-600">Premium soaps and air fresheners for hotels.</p>
+                <div class="border border-gray-100 bg-white rounded-2xl hover:shadow-xl transition overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80" alt="Hospitality" class="w-full h-24 object-cover" />
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-2 text-medical-blue">Hospitality</h3>
+                        <p class="text-gray-600 text-sm">Premium soaps and air fresheners for hotels.</p>
                     </div>
                 </div>
-                <div class="border border-gray-100 rounded-2xl hover:shadow-xl transition overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="Education" class="w-full h-40 object-cover" />
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-medical-blue">Education</h3>
-                        <p class="text-gray-600">Bulk supply solutions for schools and universities.</p>
+                <div class="border border-gray-100 bg-white rounded-2xl hover:shadow-xl transition overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="Education" class="w-full h-24 object-cover" />
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-2 text-medical-blue">Education</h3>
+                        <p class="text-gray-600 text-sm">Bulk supply solutions for schools and universities.</p>
                     </div>
                 </div>
-                <div class="border border-gray-100 rounded-2xl hover:shadow-xl transition overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Industrial" class="w-full h-40 object-cover" />
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-medical-blue">Industrial</h3>
-                        <p class="text-gray-600">Heavy-duty cleaners for factories and plants.</p>
+                <div class="border border-gray-100 bg-white rounded-2xl hover:shadow-xl transition overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Industrial" class="w-full h-24 object-cover" />
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-2 text-medical-blue">Industrial</h3>
+                        <p class="text-gray-600 text-sm">Heavy-duty cleaners for factories and plants.</p>
                     </div>
+                </div>
+                <div class="border border-gray-100 bg-white rounded-2xl hover:shadow-xl transition overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Restaurants" class="w-full h-24 object-cover" />
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-2 text-medical-blue">Restaurants</h3>
+                        <p class="text-gray-600 text-sm">Food-safe degreasers and sanitizers for kitchens and dining areas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Number counting stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center bg-white rounded-2xl border border-gray-100 py-10 px-6">
+                <div>
+                    <p class="text-4xl font-extrabold text-medical-blue counted" data-target="150" data-suffix="+">0</p>
+                    <p class="text-gray-500 text-sm mt-2">Institutions Served</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-extrabold text-medical-blue counted" data-target="5" data-suffix="">0</p>
+                    <p class="text-gray-500 text-sm mt-2">Industries Covered</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-extrabold text-medical-blue counted" data-target="12" data-suffix="">0</p>
+                    <p class="text-gray-500 text-sm mt-2">Masjids Sponsored Weekly</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-extrabold text-medical-blue counted" data-target="8" data-suffix="+">0</p>
+                    <p class="text-gray-500 text-sm mt-2">Years of Service</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Products Grid -->
-    <section id="products" class="py-20">
+    <section id="products" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Our Product Range</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Product 1 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm hover:-translate-y-2 transition duration-300">
+                <div class="bg-soft-alabaster p-6 rounded-2xl shadow-sm hover:-translate-y-2 transition duration-300">
                     <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Liquid Hand Soap" class="w-full h-56 object-cover mb-6 rounded-xl" />
                     <h3 class="text-lg font-bold">Liquid Hand Soap</h3>
                     <p class="text-sm text-gray-500 mb-4">Antibacterial & Moisturizing</p>
                 </div>
-                <!-- Product 2 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm hover:-translate-y-2 transition duration-300">
+                <div class="bg-soft-alabaster p-6 rounded-2xl shadow-sm hover:-translate-y-2 transition duration-300">
                     <img src="https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=600&q=80" alt="Industrial Tile Cleaner" class="w-full h-56 object-cover mb-6 rounded-xl" />
                     <h3 class="text-lg font-bold">Industrial Tile Cleaner</h3>
                     <p class="text-sm text-gray-500 mb-4">Heavy-duty deep degreaser</p>
                 </div>
-                <!-- Product 3 -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm hover:-translate-y-2 transition duration-300">
+                <div class="bg-soft-alabaster p-6 rounded-2xl shadow-sm hover:-translate-y-2 transition duration-300">
                     <img src="https://images.unsplash.com/photo-1596433809252-260c274591e4?auto=format&fit=crop&w=600&q=80" alt="Professional Air Freshener" class="w-full h-56 object-cover mb-6 rounded-xl" />
                     <h3 class="text-lg font-bold">Professional Air Freshener</h3>
                     <p class="text-sm text-gray-500 mb-4">Long-lasting odor neutralizer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Masjids We Sponsor Section -->
+    <section id="masjids" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="uppercase tracking-widest text-sage-green font-semibold mb-3 text-sm text-center">Giving Back</p>
+            <h2 class="text-3xl font-bold text-center mb-4">Masjids We Clean Weekly</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Every week, a share of customer donations funds a full cleaning of the masjids below. Names and locations are placeholders — send us your list and we'll update this with your actual sponsored masjids.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white border border-gray-100 rounded-2xl p-6 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center text-medical-blue font-bold">1</div>
+                    <div>
+                        <h3 class="font-bold">Central Jumat Masjid</h3>
+                        <p class="text-gray-500 text-sm">Lagos Island • Cleaned every Friday</p>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-6 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center text-medical-blue font-bold">2</div>
+                    <div>
+                        <h3 class="font-bold">Ansar-Ud-Deen Masjid</h3>
+                        <p class="text-gray-500 text-sm">Ikeja • Cleaned every Friday</p>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-6 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center text-medical-blue font-bold">3</div>
+                    <div>
+                        <h3 class="font-bold">Surulere Community Masjid</h3>
+                        <p class="text-gray-500 text-sm">Surulere • Cleaned every Friday</p>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-6 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center text-medical-blue font-bold">4</div>
+                    <div>
+                        <h3 class="font-bold">Alapere Central Masjid</h3>
+                        <p class="text-gray-500 text-sm">Ketu • Cleaned every Friday</p>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-6 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center text-medical-blue font-bold">5</div>
+                    <div>
+                        <h3 class="font-bold">Agege Central Masjid</h3>
+                        <p class="text-gray-500 text-sm">Agege • Cleaned every Friday</p>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-6 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center text-medical-blue font-bold">6</div>
+                    <div>
+                        <h3 class="font-bold">Ojota Community Masjid</h3>
+                        <p class="text-gray-500 text-sm">Ojota • Cleaned every Friday</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="uppercase tracking-widest text-sage-green font-semibold mb-3 text-sm text-center">Our Team</p>
+            <h2 class="text-3xl font-bold text-center mb-4">The Hands Behind the Masjid Cleaning</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Meet the team that shows up week after week to wash and maintain the masjids in our sponsorship programme. Names and photos are placeholders — share your team's details to personalize this section.</p>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-24 h-24 rounded-full bg-sage-green/15 mx-auto mb-4 flex items-center justify-center text-sage-green font-bold text-2xl">AB</div>
+                    <h3 class="font-bold">Abubakar B.</h3>
+                    <p class="text-gray-500 text-sm">Team Lead, Masjid Care</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 rounded-full bg-sage-green/15 mx-auto mb-4 flex items-center justify-center text-sage-green font-bold text-2xl">FM</div>
+                    <h3 class="font-bold">Fatima M.</h3>
+                    <p class="text-gray-500 text-sm">Logistics Coordinator</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 rounded-full bg-sage-green/15 mx-auto mb-4 flex items-center justify-center text-sage-green font-bold text-2xl">IS</div>
+                    <h3 class="font-bold">Ibrahim S.</h3>
+                    <p class="text-gray-500 text-sm">Cleaning Crew</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 rounded-full bg-sage-green/15 mx-auto mb-4 flex items-center justify-center text-sage-green font-bold text-2xl">RY</div>
+                    <h3 class="font-bold">Rukayat Y.</h3>
+                    <p class="text-gray-500 text-sm">Cleaning Crew</p>
                 </div>
             </div>
         </div>
@@ -129,12 +294,78 @@
                     <option>Hospital</option>
                     <option>Hotel</option>
                     <option>School</option>
+                    <option>Restaurant</option>
                     <option>Factory</option>
                 </select>
                 <button class="w-full py-4 bg-sage-green rounded-lg font-bold hover:bg-green-700 transition">Request Bulk Quote</button>
             </form>
         </div>
     </section>
+
+    <!-- Footer with Address -->
+    <footer class="bg-charcoal-grey text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div>
+                <div class="text-2xl font-bold text-white mb-3">Roy<span class="text-sage-green">'Han</span></div>
+                <p class="text-sm text-gray-400">Professional hygiene solutions for institutions, and weekly masjid care funded by our community.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3">Contact</h4>
+                <p class="text-sm text-gray-400 mb-2">123 Kudirat Abiola Way, Oregun, Ikeja, Lagos, Nigeria</p>
+                <p class="text-sm text-gray-400 mb-2">Phone: +234 800 000 0000</p>
+                <p class="text-sm text-gray-400">Email: info@royhan.com</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3">Quick Links</h4>
+                <ul class="text-sm text-gray-400 space-y-2">
+                    <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="#masjids" class="hover:text-white transition">Masjid Care</a></li>
+                    <li><a href="#team" class="hover:text-white transition">Our Team</a></li>
+                    <li><a href="#contact" class="hover:text-white transition">Get a Quote</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-white/10 text-center text-xs text-gray-500">
+            &copy; 2026 Roy'Han. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Icon -->
+    <a href="https://wa.me/2348000000000" target="_blank" rel="noopener"
+       class="wa-float fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:scale-105 transition"
+       aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 32 32" class="w-8 h-8 fill-white"><path d="M16 0C7.16 0 0 7.16 0 16c0 2.82.74 5.47 2.03 7.77L0 32l8.44-2.01A15.9 15.9 0 0 0 16 32c8.84 0 16-7.16 16-16S24.84 0 16 0zm0 29.09c-2.55 0-4.94-.7-6.98-1.92l-.5-.3-5 1.19 1.22-4.87-.33-.5A13.05 13.05 0 0 1 2.91 16C2.91 8.78 8.78 2.91 16 2.91S29.09 8.78 29.09 16 23.22 29.09 16 29.09zm7.17-9.8c-.39-.2-2.31-1.14-2.67-1.27-.36-.13-.62-.2-.88.2-.26.39-1.01 1.27-1.24 1.53-.23.26-.46.29-.85.1-.39-.2-1.65-.61-3.15-1.95-1.16-1.04-1.95-2.32-2.18-2.71-.23-.39-.02-.6.17-.79.18-.18.39-.46.59-.7.2-.23.26-.39.39-.65.13-.26.07-.49-.03-.68-.1-.2-.88-2.13-1.21-2.92-.32-.77-.64-.66-.88-.67-.23-.01-.49-.01-.75-.01-.26 0-.68.1-1.04.49-.36.39-1.37 1.34-1.37 3.27s1.4 3.79 1.6 4.05c.2.26 2.75 4.2 6.66 5.89.93.4 1.66.64 2.23.82.94.3 1.79.26 2.46.16.75-.11 2.31-.94 2.63-1.85.33-.91.33-1.69.23-1.85-.1-.16-.36-.26-.75-.46z"/></svg>
+    </a>
+
+    <script>
+        const counters = document.querySelectorAll('.counted');
+        let started = false;
+        function runCounters() {
+            if (started) return;
+            started = true;
+            counters.forEach(el => {
+                const target = parseInt(el.getAttribute('data-target'), 10);
+                const suffix = el.getAttribute('data-suffix') || '';
+                let current = 0;
+                const step = Math.max(1, Math.ceil(target / 60));
+                const interval = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(interval);
+                    }
+                    el.textContent = current + suffix;
+                }, 25);
+            });
+        }
+        const statsSection = document.querySelector('#industries');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) runCounters();
+            });
+        }, { threshold: 0.3 });
+        observer.observe(statsSection);
+    </script>
 
 </body>
 </html>
