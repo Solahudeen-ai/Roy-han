@@ -50,9 +50,13 @@
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center relative">
+            
+            <!-- Logo -->
             <div class="text-2xl font-bold text-medical-blue">Roy<span class="text-sage-green">'Han</span></div>
-            <div class="hidden md:flex space-x-7 font-medium text-sm">
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-7 font-medium text-sm items-center">
                 <a href="#home" class="hover:text-medical-blue transition">Home</a>
                 <a href="#about" class="hover:text-medical-blue transition">About Us</a>
                 <a href="#industries" class="hover:text-medical-blue transition">Industries</a>
@@ -61,28 +65,50 @@
                 <a href="#team" class="hover:text-medical-blue transition">Our Team</a>
                 <a href="#contact" class="px-5 py-2 bg-medical-blue text-white rounded-full hover:bg-teal-700 transition">Get a Quote</a>
             </div>
+
+            <!-- Mobile Hamburger Button (The 3 Lines) -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-charcoal-grey hover:text-medical-blue focus:outline-none" aria-label="Toggle Menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white shadow-xl border-t border-gray-100 md:hidden">
+                <div class="flex flex-col px-6 py-6 space-y-5 font-medium text-lg">
+                    <a href="#home" class="mobile-link hover:text-medical-blue transition">Home</a>
+                    <a href="#about" class="mobile-link hover:text-medical-blue transition">About Us</a>
+                    <a href="#industries" class="mobile-link hover:text-medical-blue transition">Industries</a>
+                    <a href="#products" class="mobile-link hover:text-medical-blue transition">Products</a>
+                    <a href="#masjids" class="mobile-link hover:text-medical-blue transition">Masjid Care</a>
+                    <a href="#team" class="mobile-link hover:text-medical-blue transition">Our Team</a>
+                    <a href="#contact" class="mobile-link text-medical-blue font-bold">Get a Quote</a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative pt-40 pb-24 px-6 overflow-hidden">
+    <!-- Hero Section (Cleaned up, human, and minimal) -->
+    <section id="home" class="relative pt-40 pb-20 px-6 overflow-hidden">
         <div class="relative z-10 max-w-7xl mx-auto text-center">
-            <p class="uppercase tracking-widest text-sage-green font-semibold mb-3 text-sm">Institutional Hygiene, Handled With Care</p>
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 max-w-3xl mx-auto leading-tight">Clean spaces. Trusted people. Every single day.</h1>
-            <p class="text-xl text-gray-700 mb-10 max-w-2xl mx-auto">Providing high-performance liquid soaps, detergents, and air fresheners to hospitals, schools, hotels, restaurants and factories.</p>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 max-w-4xl mx-auto leading-tight tracking-tight">Clean spaces. <br/><span class="text-medical-blue">Good people.</span></h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-xl mx-auto leading-relaxed">Professional care for your facilities, powered by a heart for our community.</p>
 
             <!-- Dynamic / moving hero image -->
-            <div class="relative w-full max-w-4xl mx-auto h-64 md:h-96 rounded-3xl overflow-hidden shadow-xl mb-8">
+            <div class="relative w-full max-w-4xl mx-auto h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl mb-10 border-4 border-white">
                 <div class="hero-slide" style="background-image:url('Royhan.jpeg');"></div>
                 <div class="hero-slide" style="background-image:url('Royhan2.jpeg');"></div>
                 <div class="hero-slide" style="background-image:url('Royhan3.jpeg');"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             </div>
 
-            <!-- Buttons now sit directly beneath the picture -->
-            <div class="flex justify-center gap-4">
-                <a href="#products" class="px-8 py-4 bg-charcoal-grey text-white rounded-full hover:bg-black transition">View Catalog</a>
-                <a href="#contact" class="px-8 py-4 bg-sage-green text-white rounded-full hover:bg-green-700 transition">Request Sample</a>
+            <!-- Call to Action -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#products" class="px-8 py-4 bg-charcoal-grey text-white font-medium rounded-full hover:bg-black transition shadow-lg">View Catalog</a>
+                <a href="#contact" class="px-8 py-4 bg-sage-green text-white font-medium rounded-full hover:bg-green-700 transition shadow-lg">Work With Us</a>
             </div>
         </div>
     </section>
@@ -338,6 +364,23 @@
     </a>
 
     <script>
+        // Mobile Menu Toggle Script
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Number Counters Script
         const counters = document.querySelectorAll('.counted');
         let started = false;
         function runCounters() {
